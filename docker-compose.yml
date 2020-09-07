@@ -5,19 +5,19 @@ services:
         container_name: 'aurl-mongodb'
         volumes:
             - ./data/mongo:/data/db
-        ports: 
-            - '27017:27017'
+#       ports: 
+#           - '27017:27017'
     web:
         image: 'simbafs/aurl:1.0'
         container_name: 'aurl-web'
         environment:
             DB: 'mongodb://db:27017/aurl'
-            BASEURL: 'https://url.ckcsc.net'
-            backdoor: 'https://give.me.backdoor'
-            admin: 'hahathisisadmin'
-            PORT: '3000'
+            BASEURL: 'https://your.domain'
+            backdoor: 'https://backdoor.token'
+            admin: 'admin.token'
+            PORT: '3000' #optional
             
-            appName: "CKCSC Url Shortener"
+            appName: "AURL"
             title: "Url Shortener"
             subtitle: ""
         ports: 

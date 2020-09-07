@@ -5,6 +5,8 @@ services:
         container_name: 'aurl-mongodb'
         volumes:
             - ./data/mongo:/data/db
+            - ./data/dump:/dump
+            - ./data/backup:/backup
 #       ports: 
 #           - '27017:27017'
     web:

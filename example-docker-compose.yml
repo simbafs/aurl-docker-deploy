@@ -6,7 +6,6 @@ services:
         volumes:
             - ./data/mongo:/data/db
             - ./data/dump:/dump
-            - ./data/backup:/backup
 #       ports: 
 #           - '27017:27017'
     web:
@@ -20,7 +19,7 @@ services:
             PORT: '3000' #optional
             
             appName: "AURL"
-            title: "Url Shortener"
+            title: "URL Shortener"
             subtitle: ""
         ports: 
             - '3000:3000'

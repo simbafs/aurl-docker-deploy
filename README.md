@@ -9,10 +9,15 @@
 
 ## Update
 Just `git pull`
+		
+## Export DB
+```bash
+docker exec -it aurl-mongodb mongodump
+```
+The DB will export to `./data/dump/`.
 
-## backup/restore/migrate
-Use `./backup.sh` to backup database  
-This script will generate a tar file in the `backup/`, you can move to anywhere.
-
-Use `./restore.sh` to restore database  
-This script will restore the database with `./backup-${date +"%Y%m%d.%T"}.tar.gz`. You can also assign by passing filename as the first arg.
+## Restore 
+Place DB in `./data/dump/`, then
+```bash
+docker exec -it aurl-mongodb mongorestore
+```

@@ -16,7 +16,7 @@ services:
             BASEURL: 'https://your.domain'
             backdoor: 'https://backdoor.token'
             admin: 'admin.token'
-            PORT: '3000' #optional
+            GAid: # Google Analytics optional
             
             appName: "AURL"
             title: "URL Shortener"

@@ -9,7 +9,7 @@ services:
 #       ports: 
 #           - '27017:27017'
     web:
-        image: 'simbafs/aurl:1.5'
+        image: 'simbafs/aurl:latest'
         container_name: 'aurl-web'
         environment:
             DB: 'mongodb://db:27017/aurl'

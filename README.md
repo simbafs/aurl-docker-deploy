@@ -21,3 +21,6 @@ Place DB in `./data/dump/`, then
 ```bash
 docker exec -it aurl-mongodb mongorestore
 ```
+
+## config
+place `config/local.json` in this folder, example is placed in `config/default.json`

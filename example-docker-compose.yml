@@ -9,17 +9,9 @@ services:
 #       ports: 
 #           - '27017:27017'
     web:
-        image: 'simbafs/aurl:1.7'
+        image: 'simbafs/aurl:1.8.1'
         container_name: 'aurl-web'
-        environment:
-            DB: 'mongodb://db:27017/aurl'
-            BASEURL: 'https://your.domain'
-            backdoor: 'https://backdoor.token'
-            admin: 'admin.token'
-            GAid: # Google Analytics optional
-            
-            appName: "AURL"
-            title: "URL Shortener"
-            subtitle: ""
+        volumes:
+            - ./data/local.json:/aurl/config/local.json
         ports: 
             - '3000:3000'

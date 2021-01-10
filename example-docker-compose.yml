@@ -9,7 +9,7 @@ services:
 #       ports: 
 #           - '27017:27017'
     web:
-        image: 'simbafs/aurl:1.8.1'
+        image: 'simbafs/aurl:1.8.2'
         container_name: 'aurl-web'
         volumes:
             - ./config/local.json:/aurl/config/local.json
